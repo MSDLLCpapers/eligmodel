@@ -1,0 +1,79 @@
+
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Regular.otf') format('opentype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Bold.otf') format('opentype');
+    font-weight: bold;
+  }
+  
+  * {
+    font-family: 'Source Sans Pro'; 
+  }
+  
+  .vis-network .vis-node {
+    font-family: 'Source Sans Pro' !important;  /* Force custom font */
+  }
+
+  .vis-network .vis-label {
+    font-family: 'Source Sans Pro' !important;  /* Force custom font for node labels */
+  }
+
+  .vis-network .vis-edge {
+    font-family: 'Source Sans Pro' !important;  /* Force custom font for edge labels */
+  }
+  
+  table.Rtable1 {
+    font-family: "Source Sans Pro";
+    width: 800px;
+    table-layout: fixed;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+  }
+
+  table.Rtable1 th {
+    background-color: #e8eeed;
+    color: black;
+    font-weight: bold;
+  }
+  
+  table.Rtable1 th, td {
+      padding: 10px;
+    }
+    
+  .leaflet-control {
+        font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  .leaflet-tooltip {
+        font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  .leaflet-container {
+    background: #ffffff !important;
+  }
+
+  table.Rtable1 .firstrow, .Rtable1 .firstrow ~ td {
+    border-top: 1.5pt solid #00857C;
+  }
+  
+    table.Rtable1 .lastrow {
+    border-bottom: 1.5pt solid #00857C;
+  }
+
+  table.Rtable1 td.firstrow.rowlabel {
+    font-weight: bold;
+  }
+    
+  .plot {
+  font-size: 24px;
+}
+
+
+
+
+      

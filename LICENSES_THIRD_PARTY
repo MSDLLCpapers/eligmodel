@@ -1,0 +1,72 @@
+This file lists third-party components used in the eligmodel R package, along with their respective licenses and authoritative license links.
+
+--------------------------------------------------------------------------------
+1. Font: Source Sans Pro
+--------------------------------------------------------------------------------
+Source: https://fonts.google.com/specimen/Source+Sans+Pro 
+License: SIL Open Font License (OFL) 1.1 
+License Text: https://scripts.sil.org/OFL
+
+--------------------------------------------------------------------------------
+2. Geographic Data: US Census Bureau
+--------------------------------------------------------------------------------
+Source: https://public.opendatasoft.com/explore/dataset/us-state-boundaries/information/ 
+License: Public Domain (U.S. Government Work)
+
+U.S. Census Bureau geographic data included in this package are in the public domain and may be used without restriction.
+
+--------------------------------------------------------------------------------
+3. R Packages
+--------------------------------------------------------------------------------
+=== MIT Licensed === 
+License: https://opensource.org/licenses/MIT 
+- ComplexUpset 
+- dplyr 
+- htmltools 
+- rlang 
+- stringr 
+- visNetwork 
+- usmap 
+- bslib
+- DT
+- plotly
+- R6
+- tidyr
+- withr
+
+=== GPL-3 Licensed === 
+License: https://www.gnu.org/licenses/gpl-3.0.html 
+- shiny 
+- shinydashboardPlus 
+- shinydashboard
+- survminer 
+- data.table 
+- mvtnorm 
+- pROC 
+- ggplot2 
+- sf 
+- table1
+- knitr
+- rmarkdown
+- shinyWidgets
+- showtext
+- sysfonts
+
+=== GPL-2 Licensed === 
+License: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html 
+- randomForestSRC 
+- survival
+- shinyjs 
+
+=== BSD 2-Clause Licensed === 
+License: https://opensource.org/licenses/BSD-2-Clause 
+- leaflet 
+
+=== Base R Packages === 
+The following functions from base R packages are used. These are part of the R environment, which is licensed under GPL-2 or later:
+- stats
+
+--------------------------------------------------------------------------------
+Disclaimer:
+--------------------------------------------------------------------------------
+The eligmodel package is licensed under the GNU General Public License, version 3 (GPL-3). This file is provided for informational purposes only and does not modify the terms of any license referenced herein. Each third-party component remains under its respective license.

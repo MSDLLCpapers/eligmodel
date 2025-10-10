@@ -1,0 +1,94 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# eligmodel
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The eligmodel package facilitates the analysis of real-world data (RWD) by identifying and
+augmenting patient populations who satisfy key clinical trial eligibility criteria. It 
+estimates the probability that RWD patients meet these criteria (i.e., weights) and 
+supports weighted analyses for time-to-event outcomes. The package features an interactive 
+Shiny application for implementing and visualizing the analyses. Methodological details are 
+available at [Jemielita et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34415774/).
+
+US geographic information used in the package is licensed under public domain 
+and can be found  
+[here](https://public.opendatasoft.com/explore/dataset/us-state-boundaries/information/).
+
+## Installation
+
+You can install the development version of eligmodel like so:
+
+``` r
+# This section will be updated once the package is ready to be released on CRAN
+# if not distributed on CRAN, devtools::install() can be used to install
+devtools::install()
+```
+
+## How to Contribute
+
+[Fill in instructions on how to contribute]
+
+## Example (Shiny Application)
+
+Step 1: Generate Example Data
+
+This step will generate example data to be used for the Shiny
+application
+
+``` r
+library(eligmodel)
+library(dplyr)
+library(purrr)
+
+#Generate example data
+data_list = app_data_gen(n=1000, n_trials=3, n_rwd=2, miss_pct=0.1)
+
+elig_dat_list <- data_list$elig_dat_list # A list of data.frames with example eligibility criteria for each trial/RWD combination
+char_dat_list <- data_list$char_dat_list # A list of data.frames with example patient characteristics for each trial/RWD combination 
+surv_dat_list <- data_list$surv_dat_list # A list of data.frames with example time-to-event outcomes for each trial/RWD combination
+data_dict_list <- data_list$data_dict_list # A list of data.frames with example data dictionary for each trial/RWD combination
+```
+
+Step 2: Launch the Shiny application
+
+This step will launch the interactive Shiny application to conduct
+relevant analyses and visualize results.
+
+``` r
+# Launch the Shiny application with time-to-event outcomes
+EligModelShinyApp(elig_dat_list=elig_dat_list, char_dat_list=char_dat_list, data_dict_list=data_dict_list, surv_dat_list=surv_dat_list, color_elig="#6b7ad1", color_inelig="#99c418", color_unkn="#69B8F7", color_aug="#0C2340", surv_outcome="Overall Survival")
+
+# Launch the Shiny application without time-to-event outcomes
+EligModelShinyApp(elig_dat_list=elig_dat_list, char_dat_list=char_dat_list, data_dict_list=data_dict_list, color_elig="#6b7ad1", color_inelig="#99c418", color_unkn="#69B8F7", color_aug="#0C2340")
+```
+
+Step 3: Add additional data in the analysis
+
+If additional trial or RWD is of interest, this step will add additional
+data to the Shiny application
+
+``` r
+# Generate example data for another trial and real-world data source
+data_list_new <- app_data_gen(n=1000, n_trials=1, n_rwd=1, miss_pct=0.1) 
+
+elig_dat_new <- data_list_new$elig_dat_list %>%
+  map(~ mutate(.x, trial = "Trial new"))
+char_dat_new <- data_list_new$char_dat_list %>%
+  map(~ mutate(.x, trial = "Trial new"))
+surv_dat_new <- data_list_new$surv_dat_list %>%
+  map(~ mutate(.x, trial = "Trial new"))
+data_dict_new <- data_list_new$data_dict_list %>%
+  map(~ mutate(.x, trial = "Trial new"))
+
+# Update the input data lists with the new data
+elig_dat_list_new <- append(elig_dat_list, elig_dat_new)
+char_dat_list_new <- append(char_dat_list, char_dat_new)
+surv_dat_list_new <- append(surv_dat_list, surv_dat_new)
+data_dict_list_new <- append(data_dict_list, data_dict_new)
+
+# Relaunch the Shiny application with the new input data list
+EligModelShinyApp(elig_dat_list=elig_dat_list_new, char_dat_list=char_dat_list_new, data_dict_list=data_dict_list_new, surv_dat_list=surv_dat_list_new, color_elig="#6b7ad1", color_inelig="#99c418", color_unkn="#69B8F7", color_aug="#0C2340", surv_outcome="Overall Survival")
+```
