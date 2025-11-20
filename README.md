@@ -22,6 +22,10 @@ and can be found
 You can install the development version of eligmodel like so:
 
 ``` r
+# via CRAN
+install.packages("eligmodel")
+
+# via GitHub
 # install.packages("remotes")
 remotes::install_github("MSDLLCpapers/eligmodel")
 ```
