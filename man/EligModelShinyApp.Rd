@@ -116,7 +116,7 @@ whose estimated probability of meeting all criteria exceeds a user-defined thres
 This color will be applied consistently across plots and visualizations throughout the RShiny application
 Accepts any valid R color name (e.g., "blue", "red") or hex code (e.g., "#0C2340")}
 
-\item{surv_oucome}{An optional character string specifying the time-to-event outcome to be visualized in the Shiny app (e.g., "Overall Survival")
+\item{surv_outcome}{An optional character string specifying the time-to-event outcome to be visualized in the Shiny app (e.g., "Overall Survival")
 This value will be used for labeling and display purposes within the application
 If not specified and surv_data_list is provided, a default label of "Overall Survival" will be used}
 }
@@ -186,7 +186,9 @@ surv_dat_list <- data_list$surv_dat_list
 data_dict_list <- data_list$data_dict_list
 
 # Run application #
-EligModelShinyApp(elig_dat_list, char_dat_list, data_dict_list, surv_dat_list)
+if (interactive()) {
+  EligModelShinyApp(elig_dat_list, char_dat_list, data_dict_list, surv_dat_list)
+  }
 }
 
 }

@@ -16,6 +16,7 @@ Description: The eligmodel package facilitates the analysis of real-world data (
               probability of meeting trial criteria and supports weighted analyses for time-to-event outcomes. The package also 
               includes tools for implementing and visualizing analyses through an interactive RShiny application. Methodological
               details are available at \url{https://pubmed.ncbi.nlm.nih.gov/34415774/}. 
+URL: https://github.com/MSDLLCpapers/eligmodel
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -23,11 +24,10 @@ RoxygenNote: 7.3.2
 Depends: R (>= 4.2)
 Imports: randomForestSRC, survival, pROC, survminer, mvtnorm, shinyjs,
         table1, tidyr, withr, R6, DT, plotly, sysfonts, visNetwork,
-        showtext, ComplexUpset, usmap, leaflet,
+        showtext, ComplexUpset, usmap, leaflet, data.table, stringr,
         knitr,rmarkdown, shiny, shinydashboard, shinydashboardPlus,
         rlang, ggplot2, htmltools, bslib, shinyWidgets, dplyr, sf
 Suggests: testthat, mice, ranger
-VignetteBuilder: knitr
 NeedsCompilation: no
 Packaged: 2025-06-25 13:14:17 UTC; CMcFarlane
 Author: Thomas Jemielita [aut, cre],

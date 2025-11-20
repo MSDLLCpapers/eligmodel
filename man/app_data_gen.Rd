@@ -11,7 +11,9 @@ app_data_gen(n = 1000, n_trials = 3, n_rwd = 2, n_cohorts = 1, miss_pct = 0.1)
 
 \item{n_trials}{(type = integer) number of clinical trials in the example data (default=3)}
 
-\item{n_rwd}{(type = integer)  number of real-world datasets in the example data (default=2)}
+\item{n_rwd}{(type = integer)  number of real-world datasets in the example data (default=2)}
+
+\item{n_cohorts}{type = integer) number of patient cohorts in the example data (default=1)}
 
 \item{miss_pct}{(type = numeric) proportion missing in the example eligibility criteria data (default=0.10)}
 }

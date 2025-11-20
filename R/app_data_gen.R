@@ -7,7 +7,8 @@
 #'
 #' @param n (type = integer) number of observations (patients) to include in the example data (default=1000)
 #' @param n_trials (type = integer) number of clinical trials in the example data (default=3)
-#' @param n_rwd (type = integer)  number of real-world datasets in the example data (default=2) 
+#' @param n_rwd (type = integer)  number of real-world datasets in the example data (default=2) 
+#' @param n_cohorts type = integer) number of patient cohorts in the example data (default=1)
 #' @param miss_pct (type = numeric) proportion missing in the example eligibility criteria data (default=0.10) 
 #'
 #' @returns A named list with the following components: 

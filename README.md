@@ -22,14 +22,13 @@ and can be found
 You can install the development version of eligmodel like so:
 
 ``` r
-# This section will be updated once the package is ready to be released on CRAN
-# if not distributed on CRAN, devtools::install() can be used to install
-devtools::install()
+# install.packages("remotes")
+remotes::install_github("MSDLLCpapers/eligmodel")
 ```
 
-## How to Contribute
+## Contributions
 
-[Fill in instructions on how to contribute]
+To contribute, please open a GitHub issue with reproducible examples and sanitized logs.
 
 ## Example (Shiny Application)
 
