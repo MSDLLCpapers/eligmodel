@@ -43,8 +43,8 @@ homeUI <- function(id) {
           border-radius: 15px;  /* Make corners rounded */
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); ",
         width = 12,
-        p('Click the “Update Report” button to update the figures and tables in the application with the above specifications.'),
-        p('To download a report, first update the report. Then click the “Download Report” button to export the most recently updated report.'),
+        p('Click the "Update Report" button to update the figures and tables in the application with the above specifications.'),
+        p('To download a report, first update the report. Then click the "Download Report" button to export the most recently updated report.'),
         p('To view the selections in the updated report, expand the "Report Selections" panel.'),
         br(),
         div(

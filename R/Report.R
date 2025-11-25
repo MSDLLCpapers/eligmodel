@@ -348,8 +348,8 @@ Report <- R6::R6Class("Report",
                         ret <- data.frame(
                           Criteria = criteria_clean,
                           'Selected for Analysis' = ifelse(criteria_clean %in% criteria_clean[criteria_col %in% sel_vars],
-                                                           "<span style='color:green'>✔</span>",
-                                                           "<span style='color:red'>✖</span>")
+                                                           "<span style='color:green'>+</span>",
+                                                           "<span style='color:red'>x</span>")
                         )
                         
                         ret <- DT::datatable(ret, 
